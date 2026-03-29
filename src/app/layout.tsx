@@ -12,6 +12,10 @@ export const metadata: Metadata = {
   title: 'Gustio Nusamba',
   description:
     'Self-taught software engineer passionate about crafting the solutions through digital approaches.',
+  icons: {
+    icon: '/gustio-nusamba-icon.png',
+    apple: '/gustio-nusamba-icon.png',
+  },
 };
 
 export default function RootLayout({

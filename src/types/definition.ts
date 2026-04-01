@@ -1,17 +1,17 @@
 type Technology = {
-  id: string;
+  id: number;
   name: string;
 };
 
 export type Project = {
-  id: string;
+  id: number;
   name: string;
   description: string;
   time_period: string;
   tech_stack: Technology[];
   image_url: string;
-  project_url?: string;
-  repo_url?: string;
+  project_url: string | null;
+  repo_url: string | null;
 };
 
 enum EmploymentType {
@@ -27,12 +27,12 @@ enum EmploymentType {
 type LocationType = 'Remote' | 'On-site' | 'Hybrid';
 
 type Description = {
-  id: string;
+  id: number;
   text: string;
 };
 
 export type Experience = {
-  id: string;
+  id: number;
   title: string;
   employment_type: EmploymentType;
   time_period: string;
@@ -43,7 +43,7 @@ export type Experience = {
 };
 
 export type Education = {
-  id: string;
+  id: number;
   school: string;
   degree: string;
   major: string;

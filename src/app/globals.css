@@ -1,11 +1,24 @@
 @import 'tailwindcss';
 
+:root {
+  --bg: #f7f7f5;
+  --surface: #ffffff;
+  --text: #121417;
+  --muted: #5d646e;
+  --line: #d9dde4;
+  --line-strong: #b8c0cb;
+  --primary: #1f2937;
+  --primary-ink: #ffffff;
+}
+
 html {
   overflow-x: hidden;
-  --webkit-font-smoothing: antialiased;
-  --moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  font-family: 'Albert Sans', sans-serif;
+  margin: 0;
+  color: var(--text);
+  background: var(--bg);
 }

@@ -14,7 +14,7 @@ export type Project = {
   repo_url: string | null;
 };
 
-enum EmploymentType {
+export enum EmploymentType {
   FULL_TIME = 'Full-time',
   PART_TIME = 'Part-time',
   SELF_EMPLOYED = 'Self-employed',
@@ -26,7 +26,7 @@ enum EmploymentType {
 
 type LocationType = 'Remote' | 'On-site' | 'Hybrid';
 
-type Description = {
+type JobDescription = {
   id: number;
   text: string;
 };
@@ -39,7 +39,7 @@ export type Experience = {
   company: string;
   location: string;
   location_type: LocationType;
-  description: Description[];
+  description: JobDescription[];
 };
 
 export type Education = {
@@ -48,5 +48,5 @@ export type Education = {
   degree: string;
   major: string;
   time_period: string;
-  description: Description[];
+  description: JobDescription[];
 };

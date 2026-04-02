@@ -14,15 +14,17 @@ export default function ProjectCard({ project }: ProjectCardProps) {
     .join(', ');
 
   return (
-    <article className="bg-surface-container-lowest group flex flex-col overflow-hidden">
-      <div className="bg-surface-container-high relative aspect-video w-full overflow-hidden">
-        <Image
-          src={imageSrc}
-          alt={project.name}
-          fill
-          sizes="(max-width: 1024px) 100vw, 50vw"
-          className="object-cover transition-transform duration-700 ease-in-out group-hover:scale-105"
-        />
+    <article className="bg-surface-container-lowest group border-outline-variant flex flex-col overflow-hidden rounded-2xl border">
+      <div className="bg-surface-container-high relative aspect-4/3 w-full overflow-hidden">
+        <div className="relative h-full w-full">
+          <Image
+            src={imageSrc}
+            alt={project.name}
+            fill
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            className="object-contain transition-transform duration-700 ease-in-out group-hover:scale-105"
+          />
+        </div>
       </div>
 
       <div className="flex flex-1 flex-col p-8">

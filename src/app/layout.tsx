@@ -1,6 +1,9 @@
 import type { Metadata } from 'next';
 import { Albert_Sans } from 'next/font/google';
 
+import Footer from '@/components/layouts/Footer';
+import Navbar from '@/components/layouts/Navbar';
+
 import './globals.css';
 
 const albertSans = Albert_Sans({
@@ -31,7 +34,11 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

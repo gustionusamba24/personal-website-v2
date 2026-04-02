@@ -2,6 +2,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export default function AboutContent() {
+  const emailSubject = encodeURIComponent('Project inquiry');
+  const emailBody = encodeURIComponent(
+    'Hi Gustio,\r\n\r\nI would like to discuss a project with you. Please let me know a good time to connect.\r\n\r\nThank you.'
+  );
+
   return (
     <main className="pt-32 pb-24">
       <div className="mx-auto max-w-7xl px-6">
@@ -80,7 +85,7 @@ export default function AboutContent() {
 
               <div className="mt-12 flex gap-4">
                 <Link
-                  href="mailto:hello@example.com"
+                  href={`mailto:gusti2480@gmail.com?subject=${emailSubject}&body=${emailBody}`}
                   className="bg-primary-container text-on-primary-container flex items-center gap-2 rounded-lg px-6 py-3 font-bold transition-all hover:opacity-90"
                 >
                   <span className="material-symbols-outlined">mail</span>

@@ -18,7 +18,10 @@ export default function HeroSection() {
 
           <div className="flex flex-wrap gap-4">
             <Link
-              href="/resume"
+              // href="https://drive.google.com/file/d/11-LH-Zr_vvBDroEVnLa68Zhy5Z3QM4_9/view?usp=sharing"
+              href="https://ungu.in/gustionusamba-resume"
+              target="_blank"
+              rel="noreferrer noopener"
               className="bg-primary-container text-on-primary-container flex items-center gap-2 rounded px-8 py-4 text-sm font-bold transition-all hover:opacity-90 active:scale-95"
             >
               View Resume

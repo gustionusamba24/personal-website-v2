@@ -6,7 +6,7 @@ type EducationCardProps = {
 
 export default function EducationCard({ education }: EducationCardProps) {
   return (
-    <article className="border-outline-variant/10 bg-surface-container-lowest rounded-lg border p-8 shadow-sm transition-all hover:shadow-md">
+    <article className="border-outline-variant bg-surface-container-lowest rounded-lg border p-8 shadow-sm transition-all hover:shadow-md">
       <div className="mb-4 flex flex-col justify-between md:flex-row">
         <div>
           <h4 className="text-on-surface text-lg font-bold">

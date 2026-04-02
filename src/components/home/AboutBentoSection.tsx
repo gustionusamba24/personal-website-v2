@@ -17,7 +17,7 @@ export default function AboutBentoSection() {
       </h2>
 
       <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-        <div className="border-outline-variant/10 bg-surface-container-lowest rounded border p-10 shadow-sm transition-shadow hover:shadow-md md:col-span-2">
+        <div className="border-outline-variant bg-surface-container-lowest rounded border p-10 shadow-sm transition-shadow hover:shadow-md md:col-span-2">
           <p className="text-on-surface-variant mb-6 text-lg leading-relaxed">
             As a developer, I craft the solution through digital approaches. My
             approach transforms concepts into functional and purposeful digital
@@ -44,10 +44,10 @@ export default function AboutBentoSection() {
                 rel="noreferrer"
                 className="bg-surface-container-lowest group hover:bg-primary flex items-center justify-between rounded p-3 transition-colors"
               >
-                <span className="font-medium group-hover:text-white">
+                <span className="font-medium transition-colors group-hover:text-[#964900]">
                   {social.name}
                 </span>
-                <span className="material-symbols-outlined group-hover:text-white">
+                <span className="material-symbols-outlined transition-colors group-hover:text-[#964900]">
                   {SOCIAL_ICONS[social.name] ?? 'link'}
                 </span>
               </Link>

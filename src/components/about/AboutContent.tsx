@@ -5,108 +5,96 @@ export default function AboutContent() {
   return (
     <main className="pt-32 pb-24">
       <div className="mx-auto max-w-7xl px-6">
-        <header className="mb-16">
-          <h1 className="mb-2 text-[3.5rem] leading-tight font-extrabold tracking-tight text-zinc-900">
+        <div className="mb-16">
+          <h1 className="text-on-surface mb-2 text-5xl leading-tight font-extrabold tracking-tight md:text-7xl">
             About Me
           </h1>
-          <div className="h-2 w-24 bg-gradient-to-r from-orange-700 to-orange-500"></div>
-        </header>
+        </div>
 
         <div className="grid grid-cols-1 items-start gap-16 lg:grid-cols-12">
-          <section className="lg:col-span-5">
-            <div className="relative overflow-hidden rounded-lg bg-zinc-100">
+          <div className="lg:col-span-5">
+            <div className="bg-surface-container-low relative overflow-hidden rounded-lg">
               <Image
                 src="/gustio-nusamba.webp"
                 width={1000}
                 height={1250}
-                alt="Gustio Nusamba"
-                className="aspect-[4/5] w-full object-cover grayscale transition-all duration-700 hover:grayscale-0"
+                alt="Professional portrait of Gustio Nusamba"
+                className="aspect-4/5 w-full object-cover grayscale transition-all duration-700 hover:grayscale-0"
+                priority
               />
-              <div className="absolute inset-0 bg-orange-700/10 mix-blend-multiply"></div>
+              <div className="bg-primary/10 absolute inset-0 mix-blend-multiply"></div>
             </div>
+          </div>
 
-            <div className="mt-8 border-l-4 border-orange-700 bg-zinc-100 p-6">
-              <p className="mb-2 text-xs font-bold tracking-widest text-orange-700 uppercase">
-                Current Focus
-              </p>
-              <p className="leading-relaxed text-zinc-600">
-                Full-stack development, distributed systems architecture, and
-                refining the Kinetic Monolith design philosophy.
-              </p>
-            </div>
-          </section>
-
-          <section className="max-w-2xl lg:col-span-7">
-            <div className="space-y-8 text-zinc-600">
-              <article>
-                <h2 className="mb-4 text-2xl font-bold text-zinc-900">
-                  The Pivot
+          <div className="max-w-2xl lg:col-span-7">
+            <div className="text-on-surface-variant space-y-8">
+              <section>
+                <h2 className="text-on-surface mb-4 text-2xl font-bold">
+                  My Story
                 </h2>
-                <p className="mb-6 text-lg leading-relaxed">
-                  Coming from a non-Computer Science background wasn&apos;t an
-                  obstacle; it was a unique vantage point. My journey began with
-                  a curiosity about how the digital tools we use daily are
-                  constructed. This curiosity quickly evolved into a dedicated
-                  pursuit of engineering excellence.
+                <p className="mb-4 text-lg leading-relaxed">
+                  Becoming a software engineer wasn’t part of the plan. Because,
+                  I didn’t know it was an option.
                 </p>
-              </article>
-
-              <article>
-                <h2 className="mb-4 text-2xl font-bold text-zinc-900">
-                  The Realization
-                </h2>
-                <p className="mb-6 text-lg leading-relaxed">
-                  The turning point arrived when I stopped viewing code as just
-                  syntax and started seeing it as{' '}
-                  <span className="font-semibold text-orange-700">
-                    architecture
-                  </span>
-                  . My deep dive into data structures and algorithms wasn&apos;t
-                  just an academic exercise. It was a revelation about
-                  efficiency, memory, and the raw mechanics of logic that govern
-                  every interaction in the cloud.
+                <p className="mb-4 text-lg leading-relaxed">
+                  I grew up in an environment that knew nothing about computers
+                  especially computer science. Majoring in informatics was also
+                  not an option, because at that moment my parents told me to
+                  take that major because of the good career prospects in IT
+                  field due to the massive growth of IT field.
                 </p>
-              </article>
-
-              <div className="my-12 h-px w-full bg-zinc-200"></div>
-
-              <article>
-                <h2 className="mb-4 text-2xl font-bold text-zinc-900">
-                  The Apprenticeship
-                </h2>
-                <p className="mb-6 text-lg leading-relaxed">
-                  My growth was accelerated during a rigorous apprenticeship
-                  where I was forced to confront complex legacy systems and
-                  high-scale infrastructure. It was here that I learned the
-                  value of the Kinetic Monolith, the idea that software should
-                  be robust and stable like a stone pillar, yet fluid and fast
-                  like a high-speed data stream.
+                <p className="mb-4 text-lg leading-relaxed">
+                  When I was in 2nd semester, I learned about data structures
+                  and algorithms. At beginning, it was incredibly confusing and
+                  I couldn’t grasp the point why this lesson was necessary.
                 </p>
-                <p className="text-lg leading-relaxed">
-                  Today, I build with the intent of creating lasting digital
-                  infrastructure. Whether it&apos;s a sleek UI or a robust
-                  backend service, my work is defined by precision, clarity, and
-                  an unwavering commitment to the craft of engineering.
+                <p className="mb-4 text-lg leading-relaxed">
+                  I realized that if I didn’t understand this material, it would
+                  be hard to continue my studies in the next semester. I was
+                  trying to find out about the job prospects for IT majors and I
+                  found some that suited me which was web development.
                 </p>
-              </article>
+                <p className="mb-4 text-lg leading-relaxed">
+                  I started writing HTML and CSS at 4th semester. But even then,
+                  it never felt like a path I was supposed to take because I
+                  thought it was not deserved to learn. At least, that’s what it
+                  looked like from where I was standing.
+                </p>
+                <p className="mb-4 text-lg leading-relaxed">
+                  Until I finally got a good opportunity to get join the
+                  apprenticeship program in the 2 big companies. It was a
+                  meaningful moment that I could learn and gain the knowledge
+                  from the experts.{' '}
+                </p>
+                <p className="mb-4 text-lg leading-relaxed">
+                  From there, everything moved quickly, I was taking and being
+                  involved in several freelance projects and working across the
+                  stack.
+                </p>
+                <p className="mb-4 text-lg leading-relaxed">
+                  These days, I am expanding skills in data field. The most
+                  important thing in IT is being able adapt to growth dan not
+                  being limited to just one skill.
+                </p>
+              </section>
 
               <div className="mt-12 flex gap-4">
                 <Link
                   href="mailto:hello@example.com"
-                  className="flex items-center gap-2 rounded-lg bg-orange-500 px-6 py-3 font-bold text-white transition-all hover:opacity-90"
+                  className="bg-primary-container text-on-primary-container flex items-center gap-2 rounded-lg px-6 py-3 font-bold transition-all hover:opacity-90"
                 >
-                  <span>✉</span>
+                  <span className="material-symbols-outlined">mail</span>
                   Get in Touch
                 </Link>
                 <Link
                   href="/projects"
-                  className="rounded-lg border border-zinc-300 px-6 py-3 font-bold text-orange-700 transition-all hover:bg-zinc-100"
+                  className="border-outline/20 text-primary hover:bg-surface-container-low rounded-lg border px-6 py-3 font-bold transition-all"
                 >
                   View Projects
                 </Link>
               </div>
             </div>
-          </section>
+          </div>
         </div>
       </div>
     </main>

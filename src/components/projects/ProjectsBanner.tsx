@@ -5,7 +5,7 @@ export default function ProjectsBanner() {
     <header className="mb-20">
       <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
         <div className="max-w-2xl">
-          <h1 className="text-on-surface text-5xl leading-tight font-extrabold tracking-tight md:text-6xl">
+          <h1 className="text-on-surface text-5xl leading-tight font-extrabold tracking-tight md:text-7xl">
             The Project I&apos;ve Completed
           </h1>
           <p className="text-on-surface-variant mt-6 max-w-xl text-lg leading-relaxed">

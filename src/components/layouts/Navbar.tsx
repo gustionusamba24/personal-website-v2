@@ -30,13 +30,15 @@ export default function Navbar() {
           ))}
         </div>
 
-        <button
-          type="button"
-          aria-label="Open menu"
-          className="rounded p-2 text-zinc-700 transition-colors hover:bg-zinc-100 md:hidden"
-        >
-          Menu
-        </button>
+        <div className="flex items-center gap-2">
+          <button
+            type="button"
+            aria-label="Open menu"
+            className="rounded p-2 text-zinc-700 transition-colors hover:bg-zinc-100 md:hidden"
+          >
+            <span className="material-symbols-outlined">menu</span>
+          </button>
+        </div>
       </div>
     </nav>
   );

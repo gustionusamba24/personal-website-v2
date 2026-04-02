@@ -1,16 +1,17 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function AboutBentoSection() {
   return (
     <section className="mx-auto max-w-7xl px-6">
-      <h2 className="mb-12 flex items-center gap-4 text-3xl font-extrabold tracking-tight text-zinc-900">
-        <span className="h-1 w-12 bg-orange-700"></span>
+      <h2 className="text-on-surface mb-12 flex items-center gap-4 text-3xl font-extrabold tracking-tight">
+        <span className="bg-primary h-1 w-12"></span>
         About Me
       </h2>
 
       <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-        <div className="rounded border border-zinc-200 bg-white p-10 shadow-sm transition-shadow hover:shadow-md md:col-span-2">
-          <p className="mb-6 text-lg leading-relaxed text-zinc-600">
+        <div className="border-outline-variant/10 bg-surface-container-lowest rounded border p-10 shadow-sm transition-shadow hover:shadow-md md:col-span-2">
+          <p className="text-on-surface-variant mb-6 text-lg leading-relaxed">
             As a developer, I craft the solution through digital approaches. My
             approach transforms concepts into functional and purposeful digital
             products that seamlessly integrate technology. Leveraging the AI as
@@ -19,41 +20,45 @@ export default function AboutBentoSection() {
           </p>
         </div>
 
-        <div className="flex flex-col justify-between bg-zinc-100 p-8">
+        <div className="bg-surface-container-low flex flex-col justify-between p-8">
           <div>
-            <h3 className="mb-4 text-xl font-bold text-zinc-900">Connect</h3>
-            <p className="mb-8 text-sm text-zinc-600">
-              Follow my journey across the digital landscape.
+            <h3 className="text-on-surface mb-4 text-xl font-bold">Connect</h3>
+            <p className="text-on-surface-variant mb-8 text-sm">
+              Follow my journey across the digital space.
             </p>
           </div>
 
           <div className="space-y-4">
             <Link
               href="#"
-              className="group flex items-center justify-between rounded bg-white p-3 transition-colors hover:bg-orange-700"
+              className="bg-surface-container-lowest group hover:bg-primary flex items-center justify-between rounded p-3 transition-colors"
             >
-              <span className="font-medium text-zinc-900 group-hover:text-white">
+              <span className="font-medium group-hover:text-white">
                 LinkedIn
               </span>
-              <span className="text-zinc-900 group-hover:text-white">↗</span>
-            </Link>
-            <Link
-              href="#"
-              className="group flex items-center justify-between rounded bg-white p-3 transition-colors hover:bg-orange-700"
-            >
-              <span className="font-medium text-zinc-900 group-hover:text-white">
-                GitHub
+              <span className="material-symbols-outlined group-hover:text-white">
+                north_east
               </span>
-              <span className="text-zinc-900 group-hover:text-white">↗</span>
             </Link>
             <Link
               href="#"
-              className="group flex items-center justify-between rounded bg-white p-3 transition-colors hover:bg-orange-700"
+              className="bg-surface-container-lowest group hover:bg-primary flex items-center justify-between rounded p-3 transition-colors"
             >
-              <span className="font-medium text-zinc-900 group-hover:text-white">
+              <span className="font-medium group-hover:text-white">GitHub</span>
+              <span className="material-symbols-outlined group-hover:text-white">
+                code
+              </span>
+            </Link>
+            <Link
+              href="#"
+              className="bg-surface-container-lowest group hover:bg-primary flex items-center justify-between rounded p-3 transition-colors"
+            >
+              <span className="font-medium group-hover:text-white">
                 Twitter
               </span>
-              <span className="text-zinc-900 group-hover:text-white">↗</span>
+              <span className="material-symbols-outlined group-hover:text-white">
+                link
+              </span>
             </Link>
           </div>
         </div>

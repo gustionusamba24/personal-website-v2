@@ -70,6 +70,18 @@ body {
   min-height: 100vh;
 }
 
+@media (max-width: 767px) {
+  body {
+    padding-bottom: calc(5rem + env(safe-area-inset-bottom));
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    padding-bottom: 0;
+  }
+}
+
 .page-transition-shell {
   position: relative;
   isolation: isolate;

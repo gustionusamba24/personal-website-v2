@@ -1,5 +1,12 @@
-import Image from 'next/image';
 import Link from 'next/link';
+
+import { SOCIAL_LINKS } from '@/constants/route';
+
+const SOCIAL_ICONS: Record<string, string> = {
+  Linkedin: 'north_east',
+  GitHub: 'code',
+  Instagram: 'photo_camera',
+};
 
 export default function AboutBentoSection() {
   return (
@@ -29,37 +36,22 @@ export default function AboutBentoSection() {
           </div>
 
           <div className="space-y-4">
-            <Link
-              href="#"
-              className="bg-surface-container-lowest group hover:bg-primary flex items-center justify-between rounded p-3 transition-colors"
-            >
-              <span className="font-medium group-hover:text-white">
-                LinkedIn
-              </span>
-              <span className="material-symbols-outlined group-hover:text-white">
-                north_east
-              </span>
-            </Link>
-            <Link
-              href="#"
-              className="bg-surface-container-lowest group hover:bg-primary flex items-center justify-between rounded p-3 transition-colors"
-            >
-              <span className="font-medium group-hover:text-white">GitHub</span>
-              <span className="material-symbols-outlined group-hover:text-white">
-                code
-              </span>
-            </Link>
-            <Link
-              href="#"
-              className="bg-surface-container-lowest group hover:bg-primary flex items-center justify-between rounded p-3 transition-colors"
-            >
-              <span className="font-medium group-hover:text-white">
-                Twitter
-              </span>
-              <span className="material-symbols-outlined group-hover:text-white">
-                link
-              </span>
-            </Link>
+            {SOCIAL_LINKS.map((social) => (
+              <Link
+                key={social.name}
+                href={social.url}
+                target="_blank"
+                rel="noreferrer"
+                className="bg-surface-container-lowest group hover:bg-primary flex items-center justify-between rounded p-3 transition-colors"
+              >
+                <span className="font-medium group-hover:text-white">
+                  {social.name}
+                </span>
+                <span className="material-symbols-outlined group-hover:text-white">
+                  {SOCIAL_ICONS[social.name] ?? 'link'}
+                </span>
+              </Link>
+            ))}
           </div>
         </div>
       </div>

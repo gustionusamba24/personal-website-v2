@@ -1,10 +1,6 @@
 import Link from 'next/link';
 
-const socialLinks = [
-  { label: 'LinkedIn', href: '#' },
-  { label: 'Twitter', href: '#' },
-  { label: 'GitHub', href: '#' },
-];
+import { SOCIAL_LINKS } from '@/constants/route';
 
 export default function Footer() {
   return (
@@ -14,13 +10,15 @@ export default function Footer() {
           Gustio Nusamba © 2026.
         </p>
         <div className="flex gap-8">
-          {socialLinks.map((link) => (
+          {SOCIAL_LINKS.map((link) => (
             <Link
-              key={link.label}
-              href={link.href}
+              key={link.name}
+              href={link.url}
+              target="_blank"
+              rel="noreferrer"
               className="text-[14px] font-normal text-zinc-500 transition-all duration-200 hover:text-orange-600 hover:underline hover:underline-offset-4"
             >
-              {link.label}
+              {link.name}
             </Link>
           ))}
         </div>

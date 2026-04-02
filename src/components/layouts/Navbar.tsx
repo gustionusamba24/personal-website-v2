@@ -1,45 +1,70 @@
-import Link from 'next/link';
+'use client';
 
-const navItems = [
-  { label: 'Home', href: '/' },
-  { label: 'Projects', href: '/projects' },
-  { label: 'Resume', href: '/resume' },
-  { label: 'About', href: '/about' },
-];
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+
+import { BOTTOM_NAV_LINKS, NAV_LINKS } from '@/constants/route';
 
 export default function Navbar() {
+  const pathname = usePathname();
+
   return (
-    <nav className="fixed top-0 z-50 w-full border-b border-zinc-200/80 bg-white/85 backdrop-blur-md">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
-        <Link
-          href="/"
-          className="text-lg font-bold tracking-tight text-zinc-900"
-        >
-          Gustio Nusamba
-        </Link>
-
-        <div className="hidden items-center gap-8 md:flex">
-          {navItems.map((item) => (
-            <Link
-              key={item.label}
-              href={item.href}
-              className="border-b-2 border-transparent pb-1 text-sm font-medium tracking-tight text-zinc-600 transition-colors hover:text-orange-600"
-            >
-              {item.label}
-            </Link>
-          ))}
-        </div>
-
-        <div className="flex items-center gap-2">
-          <button
-            type="button"
-            aria-label="Open menu"
-            className="rounded p-2 text-zinc-700 transition-colors hover:bg-zinc-100 md:hidden"
+    <>
+      <nav className="fixed top-0 z-50 hidden w-full border-b border-zinc-200/80 bg-white/85 backdrop-blur-md md:block">
+        <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
+          <Link
+            href="/"
+            className="text-lg font-bold tracking-tight text-zinc-900"
           >
-            <span className="material-symbols-outlined">menu</span>
-          </button>
+            Gustio Nusamba
+          </Link>
+
+          <div className="ml-auto flex items-center gap-8">
+            {NAV_LINKS.map((item) => {
+              const isActive = pathname === item.href;
+
+              return (
+                <Link
+                  key={item.label}
+                  href={item.href}
+                  className={`border-b-2 pb-1 text-sm font-medium tracking-tight transition-colors ${
+                    isActive
+                      ? 'border-orange-600 text-orange-600'
+                      : 'border-transparent text-zinc-600 hover:text-orange-600'
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+
+      <nav className="fixed bottom-0 z-50 w-full border-t border-zinc-200/80 bg-white/95 backdrop-blur md:hidden">
+        <div className="mx-auto grid h-16 max-w-7xl grid-cols-4">
+          {BOTTOM_NAV_LINKS.map((item) => {
+            const isActive = pathname === item.href;
+
+            return (
+              <Link
+                key={item.label}
+                href={item.href}
+                className={`flex flex-col items-center justify-center gap-1 text-xs font-medium transition-colors ${
+                  isActive
+                    ? 'text-orange-600'
+                    : 'text-zinc-600 hover:text-orange-600'
+                }`}
+              >
+                <span className="material-symbols-outlined text-[20px]">
+                  {item.icon}
+                </span>
+                <span>{item.label}</span>
+              </Link>
+            );
+          })}
+        </div>
+      </nav>
+    </>
   );
 }

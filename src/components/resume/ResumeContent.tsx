@@ -1,5 +1,3 @@
-import Link from 'next/link';
-
 type ExperienceItem = {
   title: string;
   period: string;
@@ -77,9 +75,68 @@ export default function ResumeContent() {
         <h1 className="mb-6 text-5xl font-extrabold tracking-tight text-zinc-900 md:text-7xl">
           Work and Experience
         </h1>
+        <p className="max-w-2xl text-lg leading-relaxed text-zinc-600">
+          A documented journey of technical growth, architectural decisions, and
+          the continuous pursuit of engineering excellence.
+        </p>
       </header>
 
       <div className="grid grid-cols-1 gap-12 md:grid-cols-12">
+        <aside className="space-y-12 md:col-span-4">
+          <section>
+            <h3 className="mb-6 text-xs font-bold tracking-widest text-orange-700 uppercase">
+              Personal Meta
+            </h3>
+            <div className="space-y-4">
+              <div>
+                <p className="text-xs font-medium text-zinc-500 uppercase">
+                  Location
+                </p>
+                <p className="font-semibold text-zinc-900">
+                  Jakarta, Indonesia
+                </p>
+              </div>
+              <div>
+                <p className="text-xs font-medium text-zinc-500 uppercase">
+                  Availability
+                </p>
+                <p className="font-semibold text-zinc-900">Remote / Hybrid</p>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h3 className="mb-6 text-xs font-bold tracking-widest text-orange-700 uppercase">
+              Core Competencies
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              {competencies.map((item) => (
+                <span
+                  key={item}
+                  className="rounded bg-zinc-100 px-3 py-1 text-xs font-medium text-zinc-600"
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
+          </section>
+
+          <div className="relative space-y-3 overflow-hidden rounded-lg bg-zinc-200 p-6">
+            <div className="relative z-10 flex items-center justify-between">
+              <span className="text-xs font-bold tracking-tight text-zinc-900">
+                SYSTEM STATUS
+              </span>
+              <span className="h-2 w-2 rounded-full bg-orange-500"></span>
+            </div>
+            <div className="relative h-2 w-full overflow-hidden rounded-full bg-zinc-300">
+              <div className="absolute inset-y-0 left-0 w-[85%] bg-gradient-to-r from-orange-700 to-orange-500"></div>
+            </div>
+            <p className="text-[10px] font-bold tracking-tighter text-zinc-600 uppercase">
+              Throughput Optimized: 98.4% uptime
+            </p>
+          </div>
+        </aside>
+
         <section className="space-y-20 md:col-span-8">
           <div>
             <div className="mb-10 flex items-center space-x-4">
@@ -151,6 +208,16 @@ export default function ResumeContent() {
                 </article>
               ))}
             </div>
+          </div>
+
+          <div className="pt-12 text-center md:text-left">
+            <button
+              type="button"
+              className="mx-auto inline-flex items-center rounded bg-orange-500 px-8 py-4 text-sm font-bold tracking-tight text-white transition-all hover:opacity-90 active:scale-95 md:mx-0"
+            >
+              <span className="mr-2">↓</span>
+              Download Full PDF Version
+            </button>
           </div>
         </section>
       </div>

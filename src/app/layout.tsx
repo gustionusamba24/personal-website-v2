@@ -19,9 +19,9 @@ export const metadata: Metadata = {
     icon: '/gustio-nusamba-icon.png',
     apple: '/gustio-nusamba-icon.png',
   },
-  verification: {
-    google: 'QHmaFH6GQ1afrvAwlW4BArxO9d5hVgO5JyTg6V665Jw',
-  },
+  // verification: {
+  //   google: 'QHmaFH6GQ1afrvAwlW4BArxO9d5hVgO5JyTg6V665Jw',
+  // },
   openGraph: {
     title: 'Gustio Nusamba',
     description:
@@ -47,6 +47,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={albertSans.className}>
       <head>
+        <meta
+          name="google-site-verification"
+          content="qzFtiC-zSflPDttLPpg_WRyzaZPOhPANDQ-9acSpmPQ"
+        />
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"

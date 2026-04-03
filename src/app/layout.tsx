@@ -19,6 +19,24 @@ export const metadata: Metadata = {
     icon: '/gustio-nusamba-icon.png',
     apple: '/gustio-nusamba-icon.png',
   },
+  verification: {
+    google: 'QHmaFH6GQ1afrvAwlW4BArxO9d5hVgO5JyTg6V665Jw',
+  },
+  openGraph: {
+    title: 'Gustio Nusamba',
+    description:
+      'Self-taught software engineer passionate about crafting the solutions through digital approaches.',
+    url: 'https://gustio-nusamba.vercel.app',
+    siteName: 'Gustio Nusamba',
+    images: [
+      {
+        url: 'https://gustio-nusamba.vercel.app/gustio-nusamba-og.png',
+        width: 1200,
+        height: 630,
+        alt: 'Gustio Nusamba Open Graph Image',
+      },
+    ],
+  },
 };
 
 export default function RootLayout({

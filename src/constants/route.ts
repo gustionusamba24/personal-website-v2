@@ -33,4 +33,5 @@ export const SOCIAL_LINKS: SocialLink[] = [
   { name: 'Linkedin', url: 'https://www.linkedin.com/in/gustio-nusamba/' },
   { name: 'GitHub', url: 'https://github.com/gustionusamba24' },
   { name: 'Instagram', url: 'https://www.instagram.com/gustiosmb/' },
+  { name: 'Medium', url: 'https://medium.com/@gustio.n' },
 ];

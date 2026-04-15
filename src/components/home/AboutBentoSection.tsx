@@ -6,6 +6,7 @@ const SOCIAL_ICONS: Record<string, string> = {
   Linkedin: 'north_east',
   GitHub: 'code',
   Instagram: 'photo_camera',
+  Medium: 'article',
 };
 
 export default function AboutBentoSection() {
